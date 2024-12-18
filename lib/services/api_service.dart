@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/todo_model.dart';
 
@@ -31,14 +32,17 @@ class ApiService {
       );
 
       // Debugging: Print status dan response dari server
-      print("Status Code: ${response.statusCode}");
-      print("Response Body: ${response.body}");
+      if (kDebugMode) {
+        print("Status Code: ${response.statusCode}");
+      }
+      if (kDebugMode) {
+        print("Response Body: ${response.body}");
+      }
 
       if (response.statusCode != 200) {
         throw Exception('Failed to add task: ${response.body}');
       }
     } catch (e) {
-      print("Error: $e");
       throw Exception('Failed to add task: $e');
     }
   }
