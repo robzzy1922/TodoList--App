@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/todo_model.dart';
 
 class ApiService {
-  final String baseUrl = "http://192.168.1.6/api/index.php";
+  final String baseUrl = "http://192.168.1.4/api/index.php";
 
   // Mengambil data To-Do List (GET)
   Future<List<Todo>> getTodos() async {

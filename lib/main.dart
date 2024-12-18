@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'RPL To-Do List',
       theme: ThemeData(primarySwatch: Colors.teal),
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
